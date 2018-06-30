@@ -8,7 +8,7 @@ public class SequenceBlocks {
 
     public static List<Character> result = new ArrayList<>();
 
-    public static void build(List<Character> blocks) {
+    public static void build(List<Character> blocks) throws InterruptedException {
 
         List<Thread> threads = blocks
                 .stream()
@@ -17,6 +17,8 @@ public class SequenceBlocks {
                 }).collect(Collectors.toList());
         for (Thread t : threads) {
             t.start();
+            //TODO implement me
+            t.join();
         }
     }
 
