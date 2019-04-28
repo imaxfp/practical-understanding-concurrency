@@ -99,7 +99,7 @@ Provide thread safe implementation for the producer consumer pattern.
 For the implementation unit tests have to be developed 'threadPoolSize = 500, invocationCount = 500'.  
 ```
 
-### Task 7_1 - Producer Consumer blocking mechanism.
+### Task 7_1 - Producer Consumer non-blocking mechanism.
 ```text
 Provide thread safe implementation for the producer consumer pattern with non-blocking mechanism.
 For the implementation unit tests have to be developed 'threadPoolSize = 500, invocationCount = 500'.  
