@@ -1,4 +1,4 @@
-package com.concurrency.task1;
+package com.understand.concurrency.task1;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,5 +21,4 @@ public class SequenceBlocks {
             t.join();
         }
     }
-
 }
