@@ -1,4 +1,4 @@
-package com.concurrency.task0;
+package com.understand.concurrency.task0;
 
 public class Runnables {
 
@@ -10,5 +10,4 @@ public class Runnables {
     public static void run() {
         task.run();
     }
-
 }

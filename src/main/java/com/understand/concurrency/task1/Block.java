@@ -1,6 +1,6 @@
-package com.concurrency.task1;
+package com.understand.concurrency.task1;
 
-import com.concurrency.utils.ThreadUtils;
+import com.understand.concurrency.utils.ThreadUtils;
 
 import java.util.List;
 import java.util.logging.Logger;
