@@ -24,6 +24,7 @@ public class VideoConference {
     };
 
     public Runnable arrive(String name) {
+        // TODO the current string should be returned to the main thread: "Hello from <name>!"
         return () -> {
             ThreadUtils.sleepRandom(100, 500);
             Logger.getGlobal().info(name + " has arrived - " + Thread.currentThread().getName());

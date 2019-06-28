@@ -1,6 +1,6 @@
-package com.understand.concurrency.task4.semaphore;
+package com.understand.concurrency.task4.atomicity;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -8,15 +8,13 @@ import java.util.concurrent.Executors;
 public class Main {
 
     private static ExecutorService executor = Executors.newCachedThreadPool();
-    private static List<String> documents = new ArrayList<String>() {
-        {
-            add("DOC 1");
-            add("PDF 1");
-            add("PDF 2");
-            add("PDF 3");
-            add("PDF 4");
-        }
-    };
+    private static List<String> documents = Arrays.asList(
+            "DOC 1",
+            "PDF 1",
+            "PDF 2",
+            "PDF 3",
+            "PDF 4"
+    );
 
     public static void main(String[] args) {
         Printer printer = new Printer();

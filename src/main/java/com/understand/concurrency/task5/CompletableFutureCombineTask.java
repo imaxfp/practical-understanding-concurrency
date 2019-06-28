@@ -9,6 +9,8 @@ public class CompletableFutureCombineTask {
     public Boolean authAndSend(String secretId) throws ExecutionException, InterruptedException {
         CompletableFuture<String> secureAPI1 = CompletableFuture.supplyAsync(() -> SecurityAPI1.auth(secretId));
         CompletableFuture<Long> secureAPI2 = CompletableFuture.supplyAsync(() -> SecurityAPI2.amountTransactions(secretId));
+
+        // TODO please use CompletableFuture#thenCombineAsync call and clarify the difference between those methods
         CompletableFuture<Boolean> res = secureAPI2.thenCombine(secureAPI1, CompletableFutureCombineTask::executeReq);
         return res.get();
     }

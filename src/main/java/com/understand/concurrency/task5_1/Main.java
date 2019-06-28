@@ -11,6 +11,7 @@ public class Main {
         CompletableFuture<Byte> api2 = api1.thenApplyAsync(API2::execute);
         CompletableFuture<String> api3 = api2.thenApplyAsync(API3::execute);
         api3.thenAccept(System.out::print);
+
         //TODO remove me and provide implementation without sleep.
         ThreadUtils.sleep(10000);
     }

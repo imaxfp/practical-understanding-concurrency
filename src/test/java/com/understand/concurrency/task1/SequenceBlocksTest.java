@@ -5,11 +5,12 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class SequenceBlocksTest {
 
-    List<Character> blocks = Arrays.asList('A', 'T', 'C', 'G');
+    private List<Character> blocks = Collections.synchronizedList(Arrays.asList('A', 'B', 'C', 'D'));
 
     @Test
     public void testBuild() throws Exception {

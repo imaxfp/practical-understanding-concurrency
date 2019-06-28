@@ -6,9 +6,10 @@ import java.util.logging.Logger;
 
 public class Main {
 
-    public static void main(String args[]) throws InterruptedException, ExecutionException {
+    public static void main(String[] args) throws InterruptedException, ExecutionException {
         List<Future<String>> futures = RemoteAPI.executeAllRequest();
-        //TODO implement me with not blocking mechanism.
+
+        //TODO implement using non-blocking approach
         for (Future<?> future : futures) {
             Logger.getGlobal().info(String.valueOf(future.get()));
         }

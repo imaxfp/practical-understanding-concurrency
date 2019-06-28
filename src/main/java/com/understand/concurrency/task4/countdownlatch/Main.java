@@ -20,5 +20,7 @@ public class Main {
         for (String s : participants) {
             executor.execute(conference.arrive(s));
         }
+
+        // TODO after all our participants arrived print out their messages
     }
 }

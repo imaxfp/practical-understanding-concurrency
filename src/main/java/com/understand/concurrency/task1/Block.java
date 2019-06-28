@@ -22,7 +22,7 @@ public class Block implements Runnable {
         Logger.getGlobal().info("Has started building process ... " + name);
         ThreadUtils.sleepRandom(1, 3);
         result.add(name);
-        Logger.getGlobal().info(name + "Has done!");
+        Logger.getGlobal().info(name + " Has done!");
     }
 
 }

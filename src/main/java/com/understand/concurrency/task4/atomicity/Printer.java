@@ -1,4 +1,4 @@
-package com.understand.concurrency.task4.semaphore;
+package com.understand.concurrency.task4.atomicity;
 
 import com.understand.concurrency.utils.ThreadUtils;
 

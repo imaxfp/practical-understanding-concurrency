@@ -8,7 +8,7 @@ public class SimpleLockTask {
         i += 1;
     }
 
-    public static int getI() {
+    public synchronized static int getI() {
         return i;
     }
 }

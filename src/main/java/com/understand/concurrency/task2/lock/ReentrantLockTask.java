@@ -1,7 +1,5 @@
 package com.understand.concurrency.task2.lock;
 
-import com.understand.concurrency.utils.ThreadUtils;
-
 import java.util.concurrent.locks.ReentrantLock;
 
 public class ReentrantLockTask {
@@ -14,13 +12,17 @@ public class ReentrantLockTask {
         lock.lock();
         try {
             i++;
-            ThreadUtils.sleep(100);
         } finally {
             lock.unlock();
         }
     }
 
     public static int getI() {
-        return i;
+        lock.lock();
+        try {
+            return i;
+        } finally {
+            lock.unlock();
+        }
     }
 }

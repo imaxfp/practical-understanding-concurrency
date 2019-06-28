@@ -18,9 +18,10 @@ public class ExecutorsTask {
         }
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
+        //TODO change the code to get the result of an asynchronous computation
+        // and print it out in the main thread
         Thread t = new Thread(ExecutorsTask.task);
-        //TODO t.start() should return the result to the main thread and print the result to the 'Logger.getGlobal().info'
         t.start();
     }
 }
